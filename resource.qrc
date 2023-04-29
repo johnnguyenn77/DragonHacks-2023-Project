@@ -1,7 +1,0 @@
-<RCC>
-  <qresource prefix="icon">
-    <file>icon/plus-8-48.icns</file>
-    <file>icon/list-view-48.icns</file>
-    <file>icon/settings-10-48.icns</file>
-  </qresource>
-</RCC>
