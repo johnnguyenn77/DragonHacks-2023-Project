@@ -1,88 +1,61 @@
-from tkinter import *
-import sys
+import tkinter as tk
 import time
 from make_draggable import make_draggable
 
-global count
-count = 0
-class stopwatch():
-    def reset(self):
-        global count
-        count=1
-        self.t.set('00:00:00.000')        
-        
-    def start(self):
-        global count
-        count = 0
-        self.timer()   
-        
-    def stop(self):
-        global count
-        count=1
-        
-    def timer(self):
-        global count
-        if(count==0):
-            self.d = str(self.t.get())
-            h, m, sms = map(int(float()), self.d.split(":"))
-            h = int(h)
-            ms, s = divmod(sms, 1000)
-            if(s<59):
-                s+=1
-            elif(s==59):
-                s=0
-                ms += 1
-                if(ms == 1000):
-                    ms = 0
-                    if(m<59):
-                        m+=1
-                    elif(m==59):
-                        m=0
-                        h+=1
-            if(h<10):
-                h = str(0)+str(h)
-            else:
-                h= str(h)
-            if(m<10):
-                m = str(0)+str(m)
-            else:
-                m = str(m)
-            if(s<10):
-                s=str(0)+str(s)
-            else:
-                s=str(s)
-            if(ms<10):
-                ms=str(00)+str(ms)
-            elif(ms<100):
-                ms=str(0)+str(ms)
-            else:
-                ms=str(ms)
-            self.d=h+":"+m+":"+s+"."+ms           
-            self.t.set(self.d)
-            if(count==0):
-                self.frame.after(1, self.timer)     
-                
+class Stopwatch:
     def __init__(self, root):
-        self.frame = Frame(root, bd = 4, bg = 'white')
-        make_draggable(self.frame)
-        self.frame.place(x=10, y=20)
-        self.t = StringVar()
-        self.t.set("00:00:00.000")
-        
-        lb = Label(self.frame, textvariable = self.t, font=('Helvetica',40), bg = "white").pack()
-        
-        buttonframe = Frame(self.frame)
-        buttonframe.pack()
-    
-        bt1 = Button(buttonframe, text="Start", width=5,height=1, command= self.start, font=('Helvetica', 12), bg = ("white")).grid(row=0, column=0)#.pack(side = LEFT)
-        bt2 = Button(buttonframe, text="Stop", width=5,height=1, command= self.stop, font=('Helvetica', 12), bg = ("white")).grid(row=0, column = 1)#pack(side = LEFT)
-        bt3 = Button(buttonframe, text="Reset", width=5,height=1, command= self.reset, font=('Helvetica', 12), bg = ("white")).grid(row=0, column=3)#pack(side = LEFT)
-        
-# test setup
-root = Tk()
-root.configure(bg='#222222')
-root.geometry('1280x720')
-root.title("Your study spacce")
-a = stopwatch(root)
+        self.root = root
+        self.sv = tk.StringVar(self.root, '00:00:00.000')
+        self.start_time = None
+        self.is_running = False
 
-root.mainloop()      
+        self.frame = tk.Frame(self.root, bd = 4, bg = "white")
+        self.frame.place(x=10, y=20)
+        make_draggable(self.frame)
+        #self.display = tk.Label(self.frame, text='00:00:00.000', font='ariel 15').pack()
+        tk.Label(self.frame, textvariable = self.sv, font='ariel 15').pack()
+        #self.display.config(textvariable = self.sv)
+
+        btn_frame = tk.Frame(self.frame)
+        btn_frame.pack()
+        tk.Button(btn_frame, text='Start', command= self.start).pack(side=tk.LEFT)
+        tk.Button(btn_frame, text='Stop', command= self.stop).pack(side=tk.RIGHT)
+        #tk.Button(btn_frame, text='Reset').pack(side=tk.RIGHT)
+        #self.frame.bind('<Return>', self.startstop)
+        #self.root.mainloop()
+
+    def start(self):
+        if not self.is_running:
+            self.start_time = time.time()
+            self.timer()
+            self.is_running = True
+
+    def timer(self):
+        self.sv.set(self.format_time(time.time() - self.start_time))
+        #self.display.config(textvariable=self.sv)
+        self.after_loop = self.root.after(50, self.timer)
+
+    def stop(self):
+        if self.is_running:
+            self.root.after_cancel(self.after_loop)
+            self.is_running = False
+
+    def startstop(self, event=None):
+        if self.is_running:
+            self.stop()
+        else:
+            self.start()
+
+    @staticmethod
+    def format_time(elap = 0):
+        hours = int(elap / 3600)
+        minutes = int(elap / 60 - hours * 60.0)
+        seconds = int(elap - hours * 3600.0 - minutes * 60.0)
+        hseconds = int((elap - hours * 3600.0 - minutes * 60.0 - seconds) * 1000)
+        return '%02d:%02d:%02d:%03d' % (hours, minutes, seconds, hseconds)
+
+
+#root = tk.Tk()
+#timer = Stopwatch(root)
+
+#root.mainloop()
