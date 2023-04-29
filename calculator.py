@@ -105,14 +105,6 @@ class Calculator:
         self.display('')
         self.string = ''
 
-
-class App:
-    def __init__(self, master):
-        self.master = master
-
-        calc = Calculator(self.master, root)
-
-
 #root = Tk()
 #app = App(root)
 #root.title('Calculator')
