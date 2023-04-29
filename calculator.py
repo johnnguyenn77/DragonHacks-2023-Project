@@ -1,21 +1,22 @@
 from tkinter import *
-import make_draggable
+from make_draggable import make_draggable
 
 class Calculator:
-    def __init__(self, parent, x, y,root):
+    def __init__(self, root):
 
-        self.frame = Frame(root, bd=4,bg='white')
+        self.frame = Frame(root, bd = 4, bg='black')
         make_draggable(self.frame)
 
         self.frame.place(x=10, y=20)
+        self.frame.pack()
         self.button_font = ('Verdana', 15)
         self.entry_font = ('Verdana', 20)
-        self.parent = parent
+        #self.parent = parent
 
         self.button_width = 4
         self.button_height = 1
-        self.container = Frame(self.parent)
-        self.container.grid(row=x, column=y)
+        self.container = self.frame
+        self.container.grid(row = 0, column = 0)
 
         self.string = ''
 
@@ -109,10 +110,10 @@ class App:
     def __init__(self, master):
         self.master = master
 
-        calc = Calculator(self.master, 0, 0)
+        calc = Calculator(self.master, root)
 
 
-root = Tk()
-app = App(root)
-root.title('dev.to calculator')
-root.mainloop()
+#root = Tk()
+#app = App(root)
+#root.title('Calculator')
+#root.mainloop()

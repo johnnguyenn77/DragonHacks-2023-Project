@@ -6,6 +6,7 @@ import time
 from stopwatch import stopwatch
 from weather import weather_widget
 from make_draggable import make_draggable
+from calculator import *
 
 #Initialize Window
 
@@ -23,6 +24,8 @@ stopwatch_frame.place(x=10, y=20)
 make_draggable(stopwatch_frame)
 
 a = stopwatch(root)
+
+calculator_widget = Calculator(root)
 
 notes = Text(stopwatch_frame)
 notes.pack()

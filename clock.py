@@ -23,7 +23,7 @@ class clock:
 
 # creating tkinter window
 
-root = Tk()
-root.title('Clock')
-a = clock(root)
-mainloop()
+#root = Tk()
+#root.title('Clock')
+#a = clock(root)
+#mainloop()
