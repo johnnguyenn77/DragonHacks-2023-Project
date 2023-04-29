@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>958</width>
+    <height>750</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="autoFillBackground">
+   <bool>true</bool>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="full" native="true">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>30</y>
+      <width>120</width>
+      <height>531</height>
+     </rect>
+    </property>
+    <widget class="QPushButton" name="pushButton_10">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>500</y>
+       <width>121</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Settings</string>
+     </property>
+     <property name="icon">
+      <iconset resource="resource.qrc">
+       <normaloff>:/icon/icon/settings-10-48.icns</normaloff>:/icon/icon/settings-10-48.icns</iconset>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QWidget" name="">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>30</y>
+       <width>121</width>
+       <height>331</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <property name="spacing">
+       <number>0</number>
+      </property>
+      <item>
+       <widget class="QPushButton" name="pushButton_2">
+        <property name="text">
+         <string>Sticky Note</string>
+        </property>
+        <property name="icon">
+         <iconset resource="resource.qrc">
+          <normaloff>:/icon/icon/plus-8-48.icns</normaloff>:/icon/icon/plus-8-48.icns</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>10</width>
+          <height>10</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_3">
+        <property name="text">
+         <string>Clock</string>
+        </property>
+        <property name="icon">
+         <iconset resource="resource.qrc">
+          <normaloff>:/icon/icon/plus-8-48.icns</normaloff>:/icon/icon/plus-8-48.icns</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>10</width>
+          <height>10</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_4">
+        <property name="text">
+         <string>Stopwatch</string>
+        </property>
+        <property name="icon">
+         <iconset resource="resource.qrc">
+          <normaloff>:/icon/icon/plus-8-48.icns</normaloff>:/icon/icon/plus-8-48.icns</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>10</width>
+          <height>10</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_5">
+        <property name="text">
+         <string>Timer</string>
+        </property>
+        <property name="icon">
+         <iconset resource="resource.qrc">
+          <normaloff>:/icon/icon/plus-8-48.icns</normaloff>:/icon/icon/plus-8-48.icns</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>10</width>
+          <height>10</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_6">
+        <property name="text">
+         <string>Music Player</string>
+        </property>
+        <property name="icon">
+         <iconset resource="resource.qrc">
+          <normaloff>:/icon/icon/plus-8-48.icns</normaloff>:/icon/icon/plus-8-48.icns</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>10</width>
+          <height>10</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_7">
+        <property name="text">
+         <string>Weather</string>
+        </property>
+        <property name="icon">
+         <iconset resource="resource.qrc">
+          <normaloff>:/icon/icon/plus-8-48.icns</normaloff>:/icon/icon/plus-8-48.icns</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>10</width>
+          <height>10</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_8">
+        <property name="text">
+         <string>To-do List</string>
+        </property>
+        <property name="icon">
+         <iconset resource="resource.qrc">
+          <normaloff>:/icon/icon/plus-8-48.icns</normaloff>:/icon/icon/plus-8-48.icns</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>10</width>
+          <height>10</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_9">
+        <property name="text">
+         <string>Calculator</string>
+        </property>
+        <property name="icon">
+         <iconset resource="resource.qrc">
+          <normaloff>:/icon/icon/plus-8-48.icns</normaloff>:/icon/icon/plus-8-48.icns</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>10</width>
+          <height>10</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QSplitter" name="splitter">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>121</width>
+       <height>29</height>
+      </rect>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <widget class="QPushButton" name="pushButton">
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="resource.qrc">
+        <normaloff>:/icon/icon/list-view-48.icns</normaloff>:/icon/icon/list-view-48.icns</iconset>
+      </property>
+      <property name="default">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label">
+      <property name="text">
+       <string>Widgets</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="icons" native="true">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>40</y>
+      <width>31</width>
+      <height>521</height>
+     </rect>
+    </property>
+    <widget class="QPushButton" name="pushButton_11">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>31</width>
+       <height>29</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="resource.qrc">
+       <normaloff>:/icon/icon/list-view-48.icns</normaloff>:/icon/icon/list-view-48.icns</iconset>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+     <property name="autoExclusive">
+      <bool>true</bool>
+     </property>
+     <property name="default">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_12">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>487</y>
+       <width>31</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="resource.qrc">
+       <normaloff>:/icon/icon/settings-10-48.icns</normaloff>:/icon/icon/settings-10-48.icns</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>20</width>
+       <height>20</height>
+      </size>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+     <property name="autoExclusive">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources>
+  <include location="resource.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>pushButton_11</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>full</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>31</x>
+     <y>52</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>200</x>
+     <y>68</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>full</receiver>
+   <slot>setHidden(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>122</x>
+     <y>45</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>109</x>
+     <y>417</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>icons</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>128</x>
+     <y>35</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>35</x>
+     <y>131</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
