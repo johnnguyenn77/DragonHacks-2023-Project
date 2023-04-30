@@ -44,11 +44,11 @@ def addCalendar():
 sb = Sidebar(root)
 sb.add_spacer('Menu')
 sb.add_button('Weather', command=addWeather)
+sb.add_button('To-do List', command=addToDoList)
 sb.add_button('Sticky Notes', command=addStickyNotes)
+sb.add_button('Clock', command=addClock)
 sb.add_button('Timer', command=addTimer)
 sb.add_button('Stopwatch', command=addStopwatch)
-sb.add_button('To-do List', command=addToDoList)
-sb.add_button('Clock', command=addClock)
 sb.add_button('Calendar', command=addCalendar)
 
 root.mainloop()
