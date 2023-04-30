@@ -3,7 +3,7 @@ import json
 from datetime import datetime
 import pip._vendor.requests as requests
 import time
-from weather import weather_widget
+#from weather import weather_widget
 from make_draggable import make_draggable
 from calculator import *
 from stopwatch import *
@@ -24,7 +24,7 @@ make_draggable(stickyNoteWidget)
 notes = Text(stickyNoteWidget)
 notes.pack()
 
-weatherWidget = weather_widget(root)
+#weatherWidget = weather_widget(root)
 stopwatchWidget = Stopwatch(root)
 calculatorWidget = Calculator(root)
 timerWidget = Timer(root)
