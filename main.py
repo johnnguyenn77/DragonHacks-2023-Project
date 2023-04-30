@@ -16,7 +16,7 @@ from calendar_1 import CALENDAR
 root = Tk()
 root.configure(bg='#212121')
 root.geometry('1600x800')
-root.title("Your study space")
+root.title("StudyDesk")
 
 def addWeather():
     weather2 = weather_widget(root)
