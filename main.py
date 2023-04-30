@@ -16,6 +16,7 @@ from calendar_1 import CALENDAR
 root = Tk()
 root.configure(bg='#212121')
 root.geometry('1600x800')
+root.iconbitmap("pen.ico")
 root.title("StudyDesk")
 
 def addWeather():
