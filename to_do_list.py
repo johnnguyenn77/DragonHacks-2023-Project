@@ -31,13 +31,7 @@ class To_Do_List:
 
         button_delete_task = tkinter.Button(self.frame, text="Delete task", width=10, command=self.delete_task, bg = '#cedfef')
         button_delete_task.pack(side = tkinter.RIGHT)
-
-        # button_load_tasks = tkinter.Button(root, text="Load tasks", width=48, command=load_tasks)
-        # button_load_tasks.pack()
-
-        # button_save_tasks = tkinter.Button(root, text="Save tasks", width=48, command=save_tasks)
-        # button_save_tasks.pack()
-
+        
         self.load_tasks()
         self.frame.place(x=10,y=20)
 

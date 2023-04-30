@@ -5,31 +5,6 @@ from make_draggable import make_draggable
  
 class Timer:
     def __init__(self, root):
-        # Declaration of variables
-        self.frame = Frame(root, bd = 4, bg='white')
-        self.frame.place(x=10, y=20)
-        make_draggable(self.frame)
-        hour=StringVar()
-        minute=StringVar()
-        second=StringVar()
-  
-        # setting the default value as 0
-        hour.set("00")
-        minute.set("00")
-        second.set("00")
-        button_frame = Frame(self.frame, bd = 4, bg='white')
-        button_frame.pack()
-        # Use of Entry class to take input from the user
-        hourEntry= Entry(button_frame, width=3, justify='center', font=("Arial",18,""), textvariable=hour).pack(side = LEFT)
-        #hourEntry.place(x=80,y=20)
-  
-        minuteEntry= Entry(button_frame, width=3, justify='center', font=("Arial",18,""),textvariable=minute).pack(side = LEFT)
-        #minuteEntry.place(x=130,y=20)
-  
-        secondEntry= Entry(button_frame, width=3, justify=CENTER, font=("Arial",18,""), textvariable=second).pack(side = RIGHT)
-        #secondEntry.place(x=180,y=20)
-  
-  
         def submit():
             try:
                 # the input provided by the user is
@@ -71,20 +46,51 @@ class Timer:
                 # by one
                 temp -= 1
  
-        # button widget
-        btn = Button(self.frame, text='Set Time Countdown', bd='5', command= submit).pack()
-        #btn.place(x = 70,y = 120)
+        # Declaration of variables
+        self.frame = Frame(root, bd = 4, bg='#a7bfd5')
+        self.frame.place(x=10, y=20)
+        make_draggable(self.frame)
+        
+        top_frame = Frame(self.frame, bd = 0, bg = '#a7bfd5',width = 300)
+        
+        name = Label(self.frame, text = 'Timer', font = ("Segoe UI Variable Display", 18), bg = '#a7bfd5')
+
+        
+        close_btn = Button(self.frame, width = 3, text = 'X', command = self.frame.place_forget, bg = '#cedfef', font = ("Segoe UI Variable Display", 12))
+        name.pack(anchor = 'nw')
+        
+        hour=StringVar()
+        minute=StringVar()
+        second=StringVar()
   
+        # setting the default value as 0
+        hour.set("00")
+        minute.set("00")
+        second.set("00")
+        button_frame = Frame(self.frame, bd = 4, bg='#cedfef')
+
+        # Use of Entry class to take input from the user
+        hourEntry= Entry(button_frame, width=3, justify='center', font = ("Segoe UI Variable Display", 18), textvariable=hour, bg = '#cedfef').pack(side = LEFT)
+  
+        minuteEntry= Entry(button_frame, width=3, justify='center', font = ("Segoe UI Variable Display", 18),textvariable=minute, bg = '#cedfef').pack(side = LEFT)
+  
+        secondEntry= Entry(button_frame, width=3, justify= CENTER, font = ("Segoe UI Variable Display", 18), textvariable=second, bg = '#cedfef').pack(side = LEFT)
+
+        button_frame.pack()
+
+        # button widget
+        btn = Button(self.frame, text='Set Time Countdown', command= submit, font= ("Segoe UI Variable Display", 12), bg = '#cedfef').pack(side = LEFT)
+        close_btn.pack(side = RIGHT, anchor = 'ne')
         # infinite loop which is required to
         # run tkinter program infinitely
         # until an interrupt occurs
 
 
 # creating Tk window
-#root = Tk()
-#root.geometry("300x250")
-#root.title("Time Counter")
+root = Tk()
+root.geometry("1280x720")
+root.title("Time Counter")
 
-#timer = Timer(root)
+timer = Timer(root)
 
-#root.mainloop()
+root.mainloop()
