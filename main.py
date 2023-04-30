@@ -41,7 +41,7 @@ def addCalendar():
     
 #Frontend part of code - Interface
 
-sb = Sidebar(root)
+sb = Sidebar(root, width = 150)
 sb.add_spacer('Menu')
 sb.add_button('Weather', command=addWeather)
 sb.add_button('To-do List', command=addToDoList)

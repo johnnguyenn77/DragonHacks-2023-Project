@@ -45,7 +45,7 @@ class SideBarButton(Canvas):
             self.icon = Sprite(icon, 20, 20)
             self.create_image(20, 20, image=self.icon)
 
-        self.text = Label(self, text=text, font="Segoe 10", bg=self.frame_color, fg="lightgrey")
+        self.text = Label(self, text=text, font=("Segoe UI Variable Display", 10, 'bold'), bg=self.frame_color, fg="lightgrey")
         self.text.place(x=40, y=10)
 
         self.bind('<Enter>', self.hover)

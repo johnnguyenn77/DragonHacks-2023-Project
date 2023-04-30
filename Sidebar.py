@@ -3,7 +3,7 @@ import tkinter.ttk as ttk
 from VerticalScrolledFrame import *
 from Controls import *
 class Sidebar(VerticalScrolledFrame):
-    def __init__(self, parent, width=200, show_scrollbar=False):
+    def __init__(self, parent, width=150, show_scrollbar=False):
         self.show_scrollbar = show_scrollbar
         super().__init__(parent, self)
         self.config(width=width)
