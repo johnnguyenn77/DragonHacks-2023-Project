@@ -48,7 +48,7 @@ class Timer:
  
         # Declaration of variables
         self.frame = Frame(root, bd = 4, bg='#a7bfd5')
-        self.frame.place(x=50, y=20)
+        self.frame.place(x=150, y=20)
         make_draggable(self.frame)
         
         top_frame = Frame(self.frame, bd = 0, bg = '#a7bfd5',width = 300)

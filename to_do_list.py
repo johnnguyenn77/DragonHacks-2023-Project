@@ -35,7 +35,7 @@ class To_Do_List:
         button_delete_task.pack(side = tkinter.RIGHT)
         
         self.load_tasks()
-        self.frame.place(x=50,y=20)
+        self.frame.place(x=150,y=20)
 
     def add_task(self):
         task= self.entry_task.get()

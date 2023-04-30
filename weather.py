@@ -64,7 +64,7 @@ class weather_widget:
         
         self.frame = Frame(root, bd = 4, bg = "#a7bfd5")
         make_draggable(self.frame)
-        self.frame.place(x=50, y=20)
+        self.frame.place(x=150, y=20)
         result_frame = Frame(self.frame, bd = 4, bg = "#a7bfd5")
         top_frame = Frame(self.frame, bd = 0, bg = '#a7bfd5')
         self.tfield = Label(result_frame, anchor='w', justify=LEFT, font = ("Segoe UI Variable Display", 12), bg = '#cedfef')

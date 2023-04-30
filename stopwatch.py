@@ -10,7 +10,7 @@ class Stopwatch:
         self.is_running = False
 
         self.frame = tk.Frame(self.root, bd = 4, bg = "#a7bfd5")
-        self.frame.place(x=50, y=20)
+        self.frame.place(x=150, y=20)
         make_draggable(self.frame)
         title = tk.Label(self.frame, fg = 'white',bg = '#222222', text = 'Stopwatch', font = ("Segoe UI Variable Display",10)).pack(anchor = 'nw', pady = 4)
         close_btn = tk.Button(self.frame, fg = 'white', bd=0, width = 3, text = 'X', command = self.frame.place_forget, bg = '#222222', font = ("Segoe UI Variable Display", 10))
