@@ -11,18 +11,17 @@ class Sticky_Note:
     
         close_btn = tkinter.Button(self.frame, width = 3, text = 'X', command = self.frame.place_forget, bg = '#cedfef', font = ("Segoe UI Variable Display", 10))
         close_btn.pack(anchor = "ne" )
-        add_btn = tkinter.Button(self.frame, width = 3, text = '+', command = add, bg = '#cedfef', font = ("Segoe UI Variable Display", 10))
-        add_btn.place(x=1.0,y=0.3)
+    #     add_btn = tkinter.Button(self.frame, width = 3, text = '+', command = self.add, bg = '#cedfef', font = ("Segoe UI Variable Display", 10))
+    #     add_btn.place(x=1.0,y=0.3)
         notes.pack()
-    
-def add():
-    #parent = Sticky_Note.nametowidget(Sticky_Note.winfo_parent())
-    stickynotecopy = Sticky_Note(root)
+    # def add(self):
+    #     #parent = Sticky_Note.nametowidget(Sticky_Note.winfo_parent())
+    #     stickynotecopy = Sticky_Note(self.root)
 
 
 
 
 root = tkinter.Tk()
-#todolist = Sticky_Note(root)
+todolist = Sticky_Note(root)
 #ADD = add()
-#root.mainloop()
+root.mainloop()
