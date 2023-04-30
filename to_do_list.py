@@ -2,7 +2,6 @@ import tkinter
 import tkinter.messagebox
 import pickle
 from make_draggable import make_draggable
-
 class To_Do_List:
 
     def __init__(self,root):
@@ -14,31 +13,25 @@ class To_Do_List:
 
         frame_tasks.pack()
 
-        self.listbox_tasks = tkinter.Listbox(frame_tasks,height=10,width=50)
+        self.listbox_tasks = tkinter.Listbox(frame_tasks,height=10,width=50, bg = '#cedfef')
         self.listbox_tasks.pack(side=tkinter.LEFT)
 
 
-        scrollbar_tasks = tkinter.Scrollbar(frame_tasks)
+        scrollbar_tasks = tkinter.Scrollbar(frame_tasks, bg = '#cedfef')
         scrollbar_tasks.pack(side = tkinter.RIGHT, fill = tkinter.Y)
 
         self.listbox_tasks.config(yscrollcommand=scrollbar_tasks.set)
         scrollbar_tasks.config(command=self.listbox_tasks.yview)
 
-        self.entry_task = tkinter.Entry(self.frame, width=53)
+        self.entry_task = tkinter.Entry(self.frame, width=53, bg = '#cedfef')
         self.entry_task.pack()
 
-        button_add_task = tkinter.Button(self.frame, text="Add task", width=10, command=self.add_task)
+        button_add_task = tkinter.Button(self.frame, text="Add task", width=10, command=self.add_task, bg = '#cedfef')
         button_add_task.pack(side = tkinter.LEFT)
 
-        button_delete_task = tkinter.Button(self.frame, text="Delete task", width=10, command=self.delete_task)
+        button_delete_task = tkinter.Button(self.frame, text="Delete task", width=10, command=self.delete_task, bg = '#cedfef')
         button_delete_task.pack(side = tkinter.RIGHT)
-
-        # button_load_tasks = tkinter.Button(root, text="Load tasks", width=48, command=load_tasks)
-        # button_load_tasks.pack()
-
-        # button_save_tasks = tkinter.Button(root, text="Save tasks", width=48, command=save_tasks)
-        # button_save_tasks.pack()
-
+        
         self.load_tasks()
         self.frame.place(x=10,y=20)
 
@@ -88,6 +81,6 @@ class To_Do_List:
 
 #Create GUI
 
-root = tkinter.Tk()
-todolist = To_Do_List(root)
-root.mainloop()
+#root = tkinter.Tk()
+#todolist = To_Do_List(root)
+#root.mainloop()
