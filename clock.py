@@ -10,7 +10,7 @@ class DigitalClock:
         self.root = root
         self.frame = Frame(self.root, bg = '#222222', width = 100)
         make_draggable(self.frame)
-        self.frame.place(x = 300, y =  30)
+        self.frame.place(x = 10, y =  30)
         
         g = geocoder.ip('me')
         result = g.address

@@ -60,11 +60,11 @@ class weather_widget:
             weather = f"Temperature: {temp}\nFeels like in: {feels_like_temp}\nPressure: {pressure} hPa\nHumidity: {humidity}%\nSunrise at {sunrise_time}\nSunset at {sunset_time}\nCloud: {cloudy}%\nInfo: {description}"
             self.tfield.config(text = weather)
             
-        #city_value = StringVar()
+        city_value = StringVar()
         
         self.frame = Frame(root, bd = 4, bg = "#a7bfd5")
         make_draggable(self.frame)
-        self.frame.place(x=300, y=20)
+        self.frame.place(x=10, y=20)
         result_frame = Frame(self.frame, bd = 4, bg = "#a7bfd5")
         top_frame = Frame(self.frame, bd = 0, bg = '#a7bfd5')
         self.tfield = Label(result_frame, anchor='w', justify=LEFT, font = ("Segoe UI Variable Display", 12), bg = '#cedfef')
@@ -72,42 +72,41 @@ class weather_widget:
         #inp_city = Entry(self.frame, textvariable = city_value,  width = 24, font= font_tuple_inp_city).pack()
         #Button(self.frame, command = lambda: showWeather(self), text = "Check Weather", font="Arial 10", bg='lightblue', fg='black', activebackground="teal", padx=5, pady=5 ).pack(pady= 20)
         showWeather(self)
-        image = Label(result_frame, bg = '#a7bfd5')
         global img1
         if int(self.id) in [200, 201, 202, 210, 211, 212, 221, 230, 231, 232]:
-            img1 = Image.open("/icon/11d.png")
+            img1 = Image.open("icon/11d.png")
             #image1 = Image.resize((50, 50), Image.ANTIALIAS)
             img1 = ImageTk.PhotoImage(img1)
         
         if int(self.id) in [300, 301, 302, 310, 311, 312, 313, 314, 321, 520, 522, 531]:
-            img1 = Image.open("/icon/09d.png")
+            img1 = Image.open("icon/09d.png")
             #image1 = Image.resize((50, 50), Image.ANTIALIAS)
             img1 = ImageTk.PhotoImage(img1)
             
         if int(self.id) in [500, 501, 502, 503, 504]:
-            img1 = Image.open("/icon/10d.png")
+            img1 = Image.open("icon/10d.png")
             #image1 = Image.resize((50, 50), Image.ANTIALIAS)
             img1 = ImageTk.PhotoImage(img1)
 
         if int(self.id) in [511, 600, 601, 602, 611, 612, 613, 615, 616, 620, 621, 622]:
-            img1 = Image.open("/icon/13d.png")
+            img1 = Image.open("icon/13d.png")
             #image1 = Image.resize((50, 50), Image.ANTIALIAS)
             img1 = ImageTk.PhotoImage(img1)
 
         if int(self.id) in [701, 711, 721, 731, 741, 751, 761, 762, 771, 781]:
             img1 = Image.open("icon/50d.png")
             #img1.resize((300, 300), Image.LANCZOS)
-            img1 = ImageTk.PhotoImage(master = image, image = img1)
+            img1 = ImageTk.PhotoImage(img1)
 
         if int(self.id) in [800]:
-            img1 = Image.open("/icon/01d.png")
+            img1 = Image.open("icon/01d.png")
             #image1 = Image.resize((50, 50), Image.ANTIALIAS)
             img1 = ImageTk.PhotoImage(img1)
             
         if int(self.id) in [801, 802, 803, 804]:
-            img1 = Image.open("/icon/03d.png")
+            img1 = Image.open("icon/03d.png")
             #img1.resize((300,20), Image.ANTIALIAS)
-            img1 = ImageTk.PhotoImage(Image.open("/icon/03d.png"))
+            img1 = ImageTk.PhotoImage(Image.open("icon/03d.png"))
                     
         #to show output
         g = geocoder.ip('me')

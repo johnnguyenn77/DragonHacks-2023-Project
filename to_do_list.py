@@ -7,9 +7,7 @@ class To_Do_List:
     def __init__(self,root):
         self.frame = tkinter.Frame(root, bd = 4, bg ='#a7bfd5')
         make_draggable(self.frame)
-        title = tkinter.Label(self.frame, fg = 'white',bg = '#222222', text = 'Stopwatch', font = ("Segoe UI Variable Display",10)).pack(anchor = 'nw', pady = 4)
-        close_btn = tkinter.Button(self.frame, fg = 'white', bd=0, width = 3, text = 'X', command = self.frame.place_forget, bg = '#222222', font = ("Segoe UI Variable Display", 10))
-        close_btn.place(x = 295, y= 0)
+        
         #Where GUI starts
         frame_tasks = tkinter.Frame(self.frame)
 
@@ -35,7 +33,7 @@ class To_Do_List:
         button_delete_task.pack(side = tkinter.RIGHT)
         
         self.load_tasks()
-        self.frame.place(x=300,y=20)
+        self.frame.place(x=10,y=20)
 
     def add_task(self):
         task= self.entry_task.get()
