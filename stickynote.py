@@ -7,7 +7,7 @@ class Sticky_Note:
         self.frame = tkinter.Frame(root, bg = '#222222', highlightbackground='white', highlightcolor= "white",highlightthickness=1)
         self.frame.place(x=300, y=20)
         make_draggable(self.frame)
-        notes = tkinter.Text(self.frame,bg = "#222222",fg = "white", insertbackground='white')
+        notes = tkinter.Text(self.frame,bg = "#222222",fg = "white", insertbackground='white', height = 15, width = 40)
     
         close_btn = tkinter.Button(self.frame, width = 3, fg = '#66fbfb', bd =0, text = 'X', command = self.frame.place_forget, bg = '#222222', font = ("Segoe UI Variable Display", 10))
         close_btn.pack(anchor = "ne")
