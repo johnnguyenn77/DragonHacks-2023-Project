@@ -6,7 +6,7 @@ from make_draggable import make_draggable
 class To_Do_List:
 
     def __init__(self,root):
-        self.frame = tkinter.Frame(root, bd = 4, bg ='black')
+        self.frame = tkinter.Frame(root, bd = 4, bg ='#a7bfd5')
         make_draggable(self.frame)
         
         #Where GUI starts
@@ -24,13 +24,13 @@ class To_Do_List:
         self.listbox_tasks.config(yscrollcommand=scrollbar_tasks.set)
         scrollbar_tasks.config(command=self.listbox_tasks.yview)
 
-        self.entry_task = tkinter.Entry(self.frame, width=50)
+        self.entry_task = tkinter.Entry(self.frame, width=53)
         self.entry_task.pack()
 
-        button_add_task = tkinter.Button(self.frame, text="Add task", width=48, command=self.add_task)
+        button_add_task = tkinter.Button(self.frame, text="Add task", width=10, command=self.add_task)
         button_add_task.pack(side = tkinter.LEFT)
 
-        button_delete_task = tkinter.Button(self.frame, text="Delete task", width=48, command=self.delete_task)
+        button_delete_task = tkinter.Button(self.frame, text="Delete task", width=10, command=self.delete_task)
         button_delete_task.pack(side = tkinter.RIGHT)
 
         # button_load_tasks = tkinter.Button(root, text="Load tasks", width=48, command=load_tasks)
@@ -87,38 +87,6 @@ class To_Do_List:
 
 
 #Create GUI
-
-# frame_tasks = tkinter.Frame(frame)
-# frame_tasks.pack()
-
-# listbox_tasks = tkinter.Listbox(frame_tasks,height=10,width=50)
-# listbox_tasks.pack(side=tkinter.LEFT)
-
-
-# scrollbar_tasks = tkinter.Scrollbar(frame_tasks)
-# scrollbar_tasks.pack(side = tkinter.RIGHT, fill = tkinter.Y)
-
-# listbox_tasks.config(yscrollcommand=scrollbar_tasks.set)
-# scrollbar_tasks.config(command=listbox_tasks.yview)
-
-# entry_task = tkinter.Entry(root, width=50)
-# entry_task.pack()
-
-# button_add_task = tkinter.Button(root, text="Add task", width=48, command=add_task)
-# button_add_task.pack(side = 'left')
-
-# button_delete_task = tkinter.Button(root, text="Delete task", width=48, command=delete_task)
-# button_delete_task.pack(side = 'right')
-
-# # button_load_tasks = tkinter.Button(root, text="Load tasks", width=48, command=load_tasks)
-# # button_load_tasks.pack()
-
-# # button_save_tasks = tkinter.Button(root, text="Save tasks", width=48, command=save_tasks)
-# # button_save_tasks.pack()
-
-# load_tasks()
-
-#checkbutton = tkinter.Checkbutton(root,text ="Call friend").pack()
 
 root = tkinter.Tk()
 todolist = To_Do_List(root)
