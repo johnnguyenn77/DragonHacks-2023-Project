@@ -53,7 +53,7 @@ class Stopwatch:
         return '%02d:%02d:%02d:%03d' % (hours, minutes, seconds, hseconds)
 
 
-root = tk.Tk()
-timer = Stopwatch(root)
+#root = tk.Tk()
+#timer = Stopwatch(root)
 
-root.mainloop()
+#root.mainloop()

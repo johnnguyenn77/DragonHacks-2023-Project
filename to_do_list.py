@@ -81,6 +81,6 @@ class To_Do_List:
 
 #Create GUI
 
-root = tkinter.Tk()
-todolist = To_Do_List(root)
-root.mainloop()
+#root = tkinter.Tk()
+#todolist = To_Do_List(root)
+#root.mainloop()

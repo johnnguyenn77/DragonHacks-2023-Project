@@ -122,11 +122,11 @@ class weather_widget:
         result_frame.pack()
         
         
-root = Tk()
-root.configure(bg='#222222')
-root.geometry('1280x720')
-root.title("Your study space")
+#root = Tk()
+#root.configure(bg='#222222')
+#root.geometry('1280x720')
+#root.title("Your study space")
 
-weatherWidget = weather_widget(root)
+#weatherWidget = weather_widget(root)
 
-root.mainloop()
+#root.mainloop()
