@@ -11,6 +11,7 @@ from to_do_list import To_Do_List
 from stickynote import Sticky_Note
 from clock import DigitalClock
 from Sidebar import *
+from calendar_1 import CALENDAR
 #from calendar_1 import CALENDAR
 
 #Initialize Window
@@ -39,6 +40,8 @@ def addToDoList():
 def addClock():
     clock = DigitalClock(root)
 
+def addCalendar():
+    calender = CALENDAR(root)
 #Frontend part of code - Interface
 
 sb = Sidebar(root)
@@ -49,6 +52,7 @@ sb.add_button('Timer', command=addTimer)
 sb.add_button('Stopwatch', command=addStopwatch)
 sb.add_button('To-do List', command=addToDoList)
 sb.add_button('Clock', command=addClock)
+sb.add_button('Calendar', command=addCalendar)
 
 # stickyNoteWidget = Frame(root, bd = 4, bg = 'white')
 # stickyNoteWidget.place(x=10, y=20)
