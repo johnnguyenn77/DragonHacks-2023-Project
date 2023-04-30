@@ -40,7 +40,7 @@ class To_Do_List:
         # button_save_tasks.pack()
 
         self.load_tasks()
-        self.frame.pack()
+        self.frame.place(x=10,y=20)
 
     def add_task(self):
         task= self.entry_task.get()
