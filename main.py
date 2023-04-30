@@ -8,6 +8,7 @@ from make_draggable import make_draggable
 from calculator import *
 from stopwatch import *
 from timer import *
+from to_do_list import *
 
 #Initialize Window
 
@@ -25,6 +26,7 @@ notes = Text(stickyNoteWidget)
 notes.pack()
 
 weatherWidget = weather_widget(root)
+ToDoList = To_Do_List(root)
 stopwatchWidget = Stopwatch(root)
 calculatorWidget = Calculator(root)
 timerWidget = Timer(root)
