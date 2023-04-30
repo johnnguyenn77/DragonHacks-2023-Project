@@ -29,6 +29,16 @@ def addStickyNotes():
     
 def addTimer():
     timer2 = Timer(root)
+    
+def addStopwatch():
+    stopwatch = Stopwatch(root)
+    
+def addToDoList():
+    todo = To_Do_List(root)
+    
+def addClock():
+    clock = DigitalClock(root)
+
 #Frontend part of code - Interface
 
 sb = Sidebar(root)
@@ -36,19 +46,8 @@ sb.add_spacer('Menu')
 sb.add_button('Weather', command = addWeather)
 sb.add_button('Sticky Notes', command = addStickyNotes)
 sb.add_button('Timer', command=addTimer)
-
-# stickyNoteWidget = Frame(root, bd = 4, bg = 'white')
-# stickyNoteWidget.place(x=10, y=20)
-# make_draggable(stickyNoteWidget)
-
-# notes = Text(stickyNoteWidget)
-# notes.pack()
-
-weatherWidget = weather_widget(root)
-stopwatchWidget = Stopwatch(root)
-todolist = To_Do_List(root)
-#calculatorWidget = Calculator(root)
-timerWidget = Timer(root)
-stickynote = Sticky_Note(root)
+sb.add_button('Stopwatch', command=addStopwatch)
+sb.add_button('Clock', command= addClock)
+sb.add_button('To-Do List', command=addToDoList)
 
 root.mainloop()
