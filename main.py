@@ -10,6 +10,7 @@ from stopwatch import *
 from timer import *
 from to_do_list import To_Do_List
 from stickynote import Sticky_Note
+from calendar_1 import CALENDAR
 
 #Initialize Window
 
@@ -33,5 +34,6 @@ todolist = To_Do_List(root)
 calculatorWidget = Calculator(root)
 timerWidget = Timer(root)
 stickynote = Sticky_Note(root)
+calendar = CALENDAR(root)
 
 root.mainloop()
