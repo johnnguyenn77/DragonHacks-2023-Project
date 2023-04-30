@@ -21,7 +21,7 @@ class Sticky_Note:
 
 
 
-root = tkinter.Tk()
-todolist = Sticky_Note(root)
+#root = tkinter.Tk()
+#todolist = Sticky_Note(root)
 #ADD = add()
-root.mainloop()
+#root.mainloop()
