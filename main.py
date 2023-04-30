@@ -14,8 +14,8 @@ from calendar_1 import CALENDAR
 #Initialize Window
 
 root = Tk()
-root.configure(bg='#222222')
-root.geometry('1280x720')
+root.configure(bg='#212121')
+root.geometry('1600x800')
 root.title("Your study space")
 
 def addWeather():

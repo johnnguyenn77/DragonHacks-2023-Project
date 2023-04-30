@@ -5,7 +5,7 @@ from ImageProcessor import *
 class SideBarSpacer(Canvas):
     def __init__(self, parent, text, *args, **kwargs):
 
-        self.frame_color = "#232323"
+        self.frame_color = "#252525"
         self.hover_border_color = "grey"
 
         Canvas.__init__(self, parent, width=199, height=35, bg=self.frame_color, highlightthickness=1, highlightbackground=self.frame_color, *args, **kwargs)
@@ -27,7 +27,7 @@ class SideBarSpacer(Canvas):
 class SideBarButton(Canvas):
     def __init__(self, parent, text, command, icon=None, tab=False, *args, **kwargs):
 
-        self.frame_color = "#232323"
+        self.frame_color = "#252525"
         self.hover_color = "#4D4c4c"
         self.hover_border_color = "grey"
         self.is_tab = tab

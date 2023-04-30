@@ -10,9 +10,9 @@ class To_Do_List:
         
         #Where GUI starts
         name = tkinter.Label(self.frame, text = 'To-do List', fg = '#66fbfb', font = ("Segoe UI Variable Display", 12), bg = '#222222')
-        close_btn = tkinter.Button(self.frame, fg = '#66fbfb', bd = 0, width = 3, text = 'X', command = self.frame.place_forget, bg = '#222222', font = ("Segoe UI Variable Display", 12))
+        close_btn = tkinter.Button(self.frame, fg = '#66fbfb', bd = 0, width = 3, text = 'X', command = self.frame.place_forget, bg = '#222222', font = ("Segoe UI Variable Display", 10))
         name.pack(anchor = 'nw', pady=4)
-        close_btn.place(x= 325, y = 0)
+        close_btn.place(x= 331, y = 3)
         frame_tasks = tkinter.Frame(self.frame, bg = '#222222')
 
         frame_tasks.pack()

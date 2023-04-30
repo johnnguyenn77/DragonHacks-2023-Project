@@ -7,8 +7,8 @@ class Sidebar(VerticalScrolledFrame):
         self.show_scrollbar = show_scrollbar
         super().__init__(parent, self)
         self.config(width=width)
-        self.interior.config(bg="#232323")
-        self.canvas.config(bg="#232323")
+        self.interior.config(bg="#252525")
+        self.canvas.config(bg="#252525")
         self.pack_propagate(0)
 
         self.pack(expand=False, side=LEFT, fill=Y)
