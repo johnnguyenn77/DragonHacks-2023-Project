@@ -5,7 +5,7 @@ from make_draggable import make_draggable
  
 class Timer:
     def __init__(self, root):
-        def submit():
+        def submit(self):
             try:
                 # the input provided by the user is
                 # stored in here :temp
@@ -13,7 +13,8 @@ class Timer:
             except:
                 print("Please input the right value")
             while temp >-1:
-         
+                if self.frame.winfo_exists() == 0:
+                    break
                 # divmod(firstvalue = temp//60, secondvalue = temp%60)
                 mins,secs = divmod(temp,60)
   
@@ -40,7 +41,7 @@ class Timer:
                 # when temp value = 0; then a messagebox pop's up
                 # with a message:"Time's up"
                 if (temp == 0):
-                    messagebox.showinfo("Timeer", "Time's up ")
+                    messagebox.showinfo("Timer", "Time's up ")
          
                 # after every one sec the value of temp will be decremented
                 # by one
@@ -55,7 +56,7 @@ class Timer:
         
         name = Label(self.frame, text = 'Timer', font = ("Segoe UI Variable Display", 10), fg = '#66fbfb', bg = '#222222')
 
-        close_btn = Button(self.frame, bd = 0, fg = '#66fbfb', width = 3, text = 'x', command = self.frame.place_forget, bg = '#222222', font = ("Segoe UI Variable Display", 12))
+        close_btn = Button(self.frame, bd = 0, fg = '#66fbfb', width = 3, text = 'x', command = self.frame.destroy, bg = '#222222', font = ("Segoe UI Variable Display", 12))
         name.pack(anchor = 'nw', pady=4)
         
         hour=StringVar()
@@ -78,7 +79,7 @@ class Timer:
         button_frame.pack()
 
         # button widget
-        btn = Button(self.frame, bd = 0, text='Start', command= submit, font= ("Segoe UI Variable Display", 12), bg = '#222222', fg = 'white').pack()
+        btn = Button(self.frame, bd = 0, text='Start', command= lambda: submit(self), font= ("Segoe UI Variable Display", 12), bg = '#222222', fg = 'white').pack()
         close_btn.place(x= 134, y = 0)
         # infinite loop which is required to
         # run tkinter program infinitely
