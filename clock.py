@@ -1,7 +1,6 @@
 from tkinter import *
 import datetime
 from datetime import datetime
-import pytz
 import geocoder
 from make_draggable import make_draggable
 
