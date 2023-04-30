@@ -5,7 +5,7 @@ from make_draggable import make_draggable
 class Sticky_Note:
     def __init__(self,root):
         self.frame = tkinter.Frame(root, bd = 4, bg = 'sky blue')
-        self.frame.place(x=10, y=20)
+        self.frame.place(x=50, y=20)
         make_draggable(self.frame)
         notes = tkinter.Text(self.frame,bg = "#222222",fg = "white")
     
