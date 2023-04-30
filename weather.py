@@ -11,6 +11,9 @@ class weather_widget:
         local_time = datetime.utcfromtimestamp(utc_with_tz)
         return local_time.time()
         
+    def destroy_self(self):
+        self.frame.pack_forget() 
+    
     def __init__(self, root):
         def time_format_for_location(utc_with_tz):
             local_time = datetime.utcfromtimestamp(utc_with_tz)
@@ -113,7 +116,8 @@ class weather_widget:
         result = g.address
         result = result.split(', ')
         image = Label(result_frame, image = img1, bg = '#a7bfd5')
-        close_btn = Button()
+        close_btn = Button(self.frame, text = 'X', command = self.destroy_self())
+        close_btn.pack()
         weather_now = Label(self.frame, text = result[0]+', ' + result[1], font = ("Segoe UI Variable Display", 14), bg = '#cedfef').pack(anchor="w")
         self.tfield.pack(side = LEFT)     
         image.pack(side= RIGHT)

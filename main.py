@@ -25,7 +25,7 @@ make_draggable(stickyNoteWidget)
 notes = Text(stickyNoteWidget)
 notes.pack()
 
-weatherWidget = weather_widget(root)
+#weatherWidget = weather_widget(root)
 stopwatchWidget = Stopwatch(root)
 calculatorWidget = Calculator(root)
 timerWidget = Timer(root)
