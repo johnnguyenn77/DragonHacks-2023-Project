@@ -56,8 +56,8 @@ class Stopwatch:
         return '%02d:%02d:%02d:%03d' % (hours, minutes, seconds, hseconds)
 
 
-root = tk.Tk()
-root.configure(bg='#222222')
-root.geometry('1280x720')
-timer = Stopwatch(root)
-root.mainloop()
+#root = tk.Tk()
+#root.configure(bg='#222222')
+#root.geometry('1280x720')
+#timer = Stopwatch(root)
+#root.mainloop()

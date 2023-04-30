@@ -87,10 +87,10 @@ class Timer:
 
 
 # creating Tk window
-root = Tk()
-root.geometry("1280x720")
-root.title("Time Counter")
-root.configure(bg='#222222')
-timer = Timer(root)
+#root = Tk()
+#root.geometry("1280x720")
+#root.title("Time Counter")
+#root.configure(bg='#222222')
+#timer = Timer(root)
 
-root.mainloop()
+#root.mainloop()

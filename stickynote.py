@@ -21,8 +21,8 @@ class Sticky_Note:
 
 
 
-root = tkinter.Tk()
-root.configure(bg='#222222')
-root.geometry('1280x720')
-todolist = Sticky_Note(root)
-root.mainloop()
+#root = tkinter.Tk()
+#root.configure(bg='#222222')
+#root.geometry('1280x720')
+#todolist = Sticky_Note(root)
+#root.mainloop()
