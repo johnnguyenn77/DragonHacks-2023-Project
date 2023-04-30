@@ -19,12 +19,12 @@ root.title("Your study spacce")
      
 #Frontend part of code - Interface
 
-stickyNoteWidget = Frame(root, bd = 4, bg = 'white')
-stickyNoteWidget.place(x=10, y=20)
-make_draggable(stickyNoteWidget)
+# stickyNoteWidget = Frame(root, bd = 4, bg = 'white')
+# stickyNoteWidget.place(x=10, y=20)
+# make_draggable(stickyNoteWidget)
 
-notes = Text(stickyNoteWidget)
-notes.pack()
+# notes = Text(stickyNoteWidget)
+# notes.pack()
 
 #weatherWidget = weather_widget(root)
 stopwatchWidget = Stopwatch(root)
