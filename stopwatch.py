@@ -9,17 +9,17 @@ class Stopwatch:
         self.start_time = None
         self.is_running = False
 
-        self.frame = tk.Frame(self.root, bd = 4, bg = "white")
+        self.frame = tk.Frame(self.root, bd = 4, bg = "#a7bfd5")
         self.frame.place(x=10, y=20)
         make_draggable(self.frame)
         #self.display = tk.Label(self.frame, text='00:00:00.000', font='ariel 15').pack()
-        tk.Label(self.frame, textvariable = self.sv, font='ariel 15').pack()
+        tk.Label(self.frame, textvariable = self.sv, font=("Arial", 30), bg = '#a7bfd5').pack()
         #self.display.config(textvariable = self.sv)
 
         btn_frame = tk.Frame(self.frame)
         btn_frame.pack()
-        tk.Button(btn_frame, text='Start', command= self.start).pack(side=tk.LEFT)
-        tk.Button(btn_frame, text='Stop', command= self.stop).pack(side=tk.RIGHT)
+        tk.Button(btn_frame, text='Start', bg = '#cedfef', command= self.start, font = ("Segoe UI Variable Display", 12)).pack(side=tk.LEFT)
+        tk.Button(btn_frame, text='Stop', bg = '#cedfef', command= self.stop, font = ("Segoe UI Variable Display", 12)).pack(side=tk.RIGHT)
         #tk.Button(btn_frame, text='Reset').pack(side=tk.RIGHT)
         #self.frame.bind('<Return>', self.startstop)
         #self.root.mainloop()
