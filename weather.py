@@ -59,19 +59,15 @@ class weather_widget:
          
             weather = f"Temperature: {temp}\nFeels like in: {feels_like_temp}\nPressure: {pressure} hPa\nHumidity: {humidity}%\nSunrise at {sunrise_time}\nSunset at {sunset_time}\nCloud: {cloudy}%\nInfo: {description}"
             self.tfield.config(text = weather)
-            
-        city_value = StringVar()
         
-        self.frame = Frame(root, bd = 4, bg = "#a7bfd5")
+        self.frame = Frame(root, highlightbackground='white', highlightcolor= "white",highlightthickness=1, bg = "#a7bfd5")
         make_draggable(self.frame)
         self.frame.place(x=10, y=20)
         result_frame = Frame(self.frame, bd = 4, bg = "#a7bfd5")
-        top_frame = Frame(self.frame, bd = 0, bg = '#a7bfd5')
         self.tfield = Label(result_frame, anchor='w', justify=LEFT, font = ("Segoe UI Variable Display", 12), bg = '#cedfef')
-        #city_head= Label(self.frame, text = 'Enter City Name', font = font_tuple_city_head).pack(pady=10) #to generate label heading
-        #inp_city = Entry(self.frame, textvariable = city_value,  width = 24, font= font_tuple_inp_city).pack()
-        #Button(self.frame, command = lambda: showWeather(self), text = "Check Weather", font="Arial 10", bg='lightblue', fg='black', activebackground="teal", padx=5, pady=5 ).pack(pady= 20)
+        
         showWeather(self)
+        
         global img1
         if int(self.id) in [200, 201, 202, 210, 211, 212, 221, 230, 231, 232]:
             img1 = Image.open("icon/11d.png")
@@ -113,12 +109,11 @@ class weather_widget:
         result = g.address
         result = result.split(', ')
         image = Label(result_frame, image = img1, bg = '#a7bfd5')
-        close_btn = Button(top_frame, width = 3, text = 'X', command = self.frame.place_forget, bg = '#cedfef', font = ("Segoe UI Variable Display", 10))
+        close_btn = Button(self.frame, width = 3, text = 'X', command = self.frame.place_forget, bg = '#cedfef', font = ("Segoe UI Variable Display", 10))
         close_btn.pack(side = RIGHT)
-        weather_now = Label(top_frame, text = result[0]+', ' + result[1], font = ("Segoe UI Variable Display", 14), bg = '#cedfef').pack(padx = 7, side = LEFT)
+        weather_now = Label(self.frame, text = result[0]+', ' + result[1], font = ("Segoe UI Variable Display", 14), bg = '#cedfef').pack(pady = 4, anchor = 'nw')
         self.tfield.pack(side = LEFT)     
         image.pack(side= RIGHT)
-        top_frame.pack()
         result_frame.pack()
         
         

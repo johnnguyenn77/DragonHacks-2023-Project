@@ -37,7 +37,7 @@ class To_Do_List:
         button_delete_task.pack(side = tkinter.RIGHT)
         
         self.load_tasks()
-        self.frame.place(x=10,y=20)
+        self.frame.place(x=300,y=20)
 
     def add_task(self):
         task= self.entry_task.get()
@@ -85,9 +85,9 @@ class To_Do_List:
 
 #Create GUI
 
-root = tkinter.Tk()
-root.title("Time Counter")
-root.geometry("1280x720")
-root.configure(bg='#222222')
-todolist = To_Do_List(root)
-root.mainloop()
+#root = tkinter.Tk()
+#root.title("Time Counter")
+#root.geometry("1280x720")
+#root.configure(bg='#222222')
+#todolist = To_Do_List(root)
+#root.mainloop()
