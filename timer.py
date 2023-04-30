@@ -59,9 +59,9 @@ class Timer:
         close_btn = Button(self.frame, width = 3, text = 'X', command = self.frame.place_forget, bg = '#cedfef', font = ("Segoe UI Variable Display", 12))
         name.pack(anchor = 'nw')
         
-        hour=StringVar()
-        minute=StringVar()
-        second=StringVar()
+        hour=StringVar(root)
+        minute=StringVar(root)
+        second=StringVar(root)
   
         # setting the default value as 0
         hour.set("00")

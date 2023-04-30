@@ -1,6 +1,6 @@
 
 from tkinter import *
-from .ImageProcessor import *
+from ImageProcessor import *
 
 class SideBarSpacer(Canvas):
     def __init__(self, parent, text, *args, **kwargs):

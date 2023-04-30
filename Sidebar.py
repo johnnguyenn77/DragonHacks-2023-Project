@@ -1,7 +1,7 @@
 from tkinter import *
 import tkinter.ttk as ttk
-from .VerticalScrolledFrame import *
-from .Controls import *
+from VerticalScrolledFrame import *
+from Controls import *
 class Sidebar(VerticalScrolledFrame):
     def __init__(self, parent, width=200, show_scrollbar=False):
         self.show_scrollbar = show_scrollbar
