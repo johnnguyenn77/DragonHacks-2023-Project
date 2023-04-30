@@ -15,8 +15,8 @@ class DigitalClock:
         result = g.address
         result = result.split(', ')
         title = Label(self.frame, fg = '#66fbfb',bg = '#222222', text = 'Clock', font = ("Segoe UI Variable Display",10)).pack(anchor = 'nw', pady =4)
-        close_btn = Button(self.frame, fg = '#66fbfb', bd=0, width = 3, text = 'X', command = self.frame.place_forget, bg = '#222222', font = ("Segoe UI Variable Display", 10))
-        close_btn.place(x = 208, y= 0)
+        close_btn = Button(self.frame, fg = '#66fbfb', bd=0, width = 3, text = 'x', command = self.frame.place_forget, bg = '#222222', font = ("Segoe UI Variable Display", 12))
+        close_btn.place(x = 202, y= 0)
         location = Label(self.frame, bg = '#222222', fg ='white',text = result[0]+', '+result[1], font = ("Segoe UI Variable Display",15))
         #display the time
         self.digital_time_lb = Label(self.frame,font=("Segoe UI Variable Display",30), fg = 'white', bg = '#222222')

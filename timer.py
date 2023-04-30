@@ -55,7 +55,7 @@ class Timer:
         
         name = Label(self.frame, text = 'Timer', font = ("Segoe UI Variable Display", 10), fg = '#66fbfb', bg = '#222222')
 
-        close_btn = Button(self.frame, bd = 0, fg = '#66fbfb', width = 3, text = 'X', command = self.frame.place_forget, bg = '#222222', font = ("Segoe UI Variable Display", 12))
+        close_btn = Button(self.frame, bd = 0, fg = '#66fbfb', width = 3, text = 'x', command = self.frame.place_forget, bg = '#222222', font = ("Segoe UI Variable Display", 12))
         name.pack(anchor = 'nw', pady=4)
         
         hour=StringVar()
@@ -79,7 +79,7 @@ class Timer:
 
         # button widget
         btn = Button(self.frame, bd = 0, text='Start', command= submit, font= ("Segoe UI Variable Display", 12), bg = '#222222', fg = 'white').pack()
-        close_btn.place(x= 133, y = 0)
+        close_btn.place(x= 134, y = 0)
         # infinite loop which is required to
         # run tkinter program infinitely
         # until an interrupt occurs

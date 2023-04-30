@@ -110,7 +110,7 @@ class weather_widget:
         result = g.address
         result = result.split(', ')
         image = Label(result_frame, image = img1, bg = '#222222')
-        close_btn = Button(self.frame, width = 3, text = 'X', fg = '#66fbfb', bd = 0, command = self.frame.place_forget, bg = '#222222', font = ("Segoe UI Variable Display", 12))
+        close_btn = Button(self.frame, width = 3, text = 'x', fg = '#66fbfb', bd = 0, command = self.frame.place_forget, bg = '#222222', font = ("Segoe UI Variable Display", 12))
         close_btn.place(x = 216, y =0)
         weather_now = Label(self.frame, text = result[0]+', ' + result[1], fg = 'white', font = ("Segoe UI Variable Display", 12), bg = '#222222').pack(pady = 4, anchor = 'nw')
         self.tfield.pack(side = LEFT)     
