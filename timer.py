@@ -53,11 +53,11 @@ class Timer:
         
         top_frame = Frame(self.frame, bd = 0, bg = '#a7bfd5',width = 300)
         
-        name = Label(self.frame, text = 'Timer', font = ("Segoe UI Variable Display", 18), bg = '#a7bfd5')
+        name = Label(self.frame, text = 'Timer', font = ("Segoe UI Variable Display", 10), bg = '#a7bfd5')
 
         
         close_btn = Button(self.frame, bd = 0, width = 3, text = 'X', command = self.frame.place_forget, bg = '#cedfef', font = ("Segoe UI Variable Display", 12))
-        name.pack(anchor = 'nw')
+        name.pack(anchor = 'nw', pady=4)
         
         hour=StringVar()
         minute=StringVar()
@@ -79,7 +79,7 @@ class Timer:
         button_frame.pack()
 
         # button widget
-        btn = Button(self.frame, bd = 0, text='Set Time Countdown', command= submit, font= ("Segoe UI Variable Display", 12), bg = '#cedfef').pack()
+        btn = Button(self.frame, bd = 0, text='Start', command= submit, font= ("Segoe UI Variable Display", 12), bg = '#cedfef').pack()
         close_btn.place(x= 133, y = 0)
         # infinite loop which is required to
         # run tkinter program infinitely
