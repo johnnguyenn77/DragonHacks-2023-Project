@@ -1,35 +1,25 @@
 # Import Required Library
 from tkinter import *
 from tkcalendar import Calendar
-import datetime as dt
- 
-# Create Object
-root = Tk()
- 
-# Set geometry
-root.geometry("400x400")
+from datetime import date
+from make_draggable import make_draggable
 
-date = dt.datetime.now()
-# Create Label to display the Date
-label = Label(root, text=f"{date:%A, %B %d, %Y}", font="Calibri, 20")
-label.pack(pady=20)
- 
 # Add Calendar
-cal = Calendar(root, selectmode = 'day',
-               year = 2020, month = 5,
-               day = 22)
- 
-cal.pack(pady = 20)
- 
-def grad_date():
-    date.config(text = "Selected Date is: " + cal.get_date())
- 
-# Add Button and Label
-Button(root, text = "Get Date",
-       command = grad_date).pack(pady = 20)
- 
-date = Label(root, text = "")
-date.pack(pady = 20)
+class CALENDAR:
+    def __init__(self,root):
+        self.frame = Frame(root, bd = 4, bg='black')
+        make_draggable(self.frame)
+        self.frame.place(x=300, y=20)
+        self.today=date.today()
+        self.todayy=str(self.today)
+        self.todayyy = self.todayy.split("-")
+        self.cal = Calendar(self.frame, selectmode = 'day', year = int(self.todayyy[0]), month = int(self.todayyy[1]), day = int(self.todayyy[2]))
+        self.cal.pack(pady = 20)
+    
+    #def grad_date(self):
+     #   self.date.config(text = "Selected Date is: " + self.cal.get_date())
  
 # Execute Tkinter
+root = Tk()
+call = CALENDAR(root)
 root.mainloop()
