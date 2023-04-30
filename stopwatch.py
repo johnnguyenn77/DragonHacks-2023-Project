@@ -9,12 +9,12 @@ class Stopwatch:
         self.start_time = None
         self.is_running = False
 
-        self.frame = tk.Frame(self.root, bd = 4, bg = "#a7bfd5")
+        self.frame = tk.Frame(self.root, highlightbackground='white', highlightcolor= "white",highlightthickness=1, bg = "#a7bfd5")
         self.frame.place(x=300, y=20)
         make_draggable(self.frame)
         title = tk.Label(self.frame, fg = 'white',bg = '#222222', text = 'Stopwatch', font = ("Segoe UI Variable Display",10)).pack(anchor = 'nw', pady = 4)
         close_btn = tk.Button(self.frame, fg = 'white', bd=0, width = 3, text = 'X', command = self.frame.place_forget, bg = '#222222', font = ("Segoe UI Variable Display", 10))
-        close_btn.place(x = 253, y= 0)
+        close_btn.place(x = 251, y= 0)
         #self.display = tk.Label(self.frame, text='00:00:00.000', font='ariel 15').pack()
         tk.Label(self.frame, textvariable = self.sv, font=("Arial", 35), bg = '#a7bfd5').pack()
         #self.display.config(textvariable = self.sv)
@@ -56,7 +56,8 @@ class Stopwatch:
         return '%02d:%02d:%02d:%03d' % (hours, minutes, seconds, hseconds)
 
 
-#root = tk.Tk()
-#timer = Stopwatch(root)
-
-#root.mainloop()
+root = tk.Tk()
+root.configure(bg='#222222')
+root.geometry('1280x720')
+timer = Stopwatch(root)
+root.mainloop()
