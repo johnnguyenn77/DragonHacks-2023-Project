@@ -55,16 +55,17 @@ class weather_widget:
             sunrise_time = time_format_for_location(sunrise + timezone)
             sunset_time = time_format_for_location(sunset + timezone)
  
-                #assigning Values to our weather varaible, to display as output
+            #assigning Values to our weather varaible, to display as output
          
             weather = f"Temperature: {temp}\nFeels like in: {feels_like_temp}\nPressure: {pressure} hPa\nHumidity: {humidity}%\nSunrise at {sunrise_time}\nSunset at {sunset_time}\nCloud: {cloudy}%\nInfo: {description}"
             self.tfield.config(text = weather)
         
-        self.frame = Frame(root, highlightbackground='white', highlightcolor= "white",highlightthickness=1, bg = "#a7bfd5")
+        self.frame = Frame(root, highlightbackground='white', highlightcolor= "white",highlightthickness=1, bg = "#222222")
         make_draggable(self.frame)
         self.frame.place(x=300, y=20)
-        result_frame = Frame(self.frame, bd = 4, bg = "#a7bfd5")
-        self.tfield = Label(result_frame, anchor='w', justify=LEFT, font = ("Segoe UI Variable Display", 12), bg = '#cedfef')
+        name = Label(self.frame, bg = '#222222', fg = '#66bfbf', text = 'Weather', font = ("Segoe UI Variable Display", 12)).pack(anchor = 'nw', pady=4)
+        result_frame = Frame(self.frame, bd = 4, bg = "#222222")
+        self.tfield = Label(result_frame, anchor='w', justify=LEFT, fg = 'white', font = ("Segoe UI Variable Display", 12), bg = '#222222')
         
         showWeather(self)
         
@@ -108,10 +109,10 @@ class weather_widget:
         g = geocoder.ip('me')
         result = g.address
         result = result.split(', ')
-        image = Label(result_frame, image = img1, bg = '#a7bfd5')
-        close_btn = Button(self.frame, width = 3, text = 'X', command = self.frame.place_forget, bg = '#cedfef', font = ("Segoe UI Variable Display", 10))
-        close_btn.pack(side = RIGHT)
-        weather_now = Label(self.frame, text = result[0]+', ' + result[1], font = ("Segoe UI Variable Display", 14), bg = '#cedfef').pack(pady = 4, anchor = 'nw')
+        image = Label(result_frame, image = img1, bg = '#222222')
+        close_btn = Button(self.frame, width = 3, text = 'X', fg = '#66fbfb', bd = 0, command = self.frame.place_forget, bg = '#222222', font = ("Segoe UI Variable Display", 12))
+        close_btn.place(x = 216, y =0)
+        weather_now = Label(self.frame, text = result[0]+', ' + result[1], fg = 'white', font = ("Segoe UI Variable Display", 12), bg = '#222222').pack(pady = 4, anchor = 'nw')
         self.tfield.pack(side = LEFT)     
         image.pack(side= RIGHT)
         result_frame.pack()

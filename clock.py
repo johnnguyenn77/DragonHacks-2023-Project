@@ -7,15 +7,15 @@ from make_draggable import make_draggable
 class DigitalClock:
     def __init__(self, root):
         self.root = root
-        self.frame = Frame(self.root, bg = '#222222', width = 100)
+        self.frame = Frame(self.root, highlightbackground='white', highlightcolor= "white",highlightthickness=1, bg = '#222222', width = 100)
         make_draggable(self.frame)
         self.frame.place(x = 300, y =  30)
         
         g = geocoder.ip('me')
         result = g.address
         result = result.split(', ')
-        title = Label(self.frame, fg = 'white',bg = '#222222', text = 'Clock', font = ("Segoe UI Variable Display",10)).pack(anchor = 'nw', pady =5)
-        close_btn = Button(self.frame, fg = 'white', bd=0, width = 3, text = 'X', command = self.frame.place_forget, bg = '#222222', font = ("Segoe UI Variable Display", 10))
+        title = Label(self.frame, fg = '#66fbfb',bg = '#222222', text = 'Clock', font = ("Segoe UI Variable Display",10)).pack(anchor = 'nw', pady =4)
+        close_btn = Button(self.frame, fg = '#66fbfb', bd=0, width = 3, text = 'X', command = self.frame.place_forget, bg = '#222222', font = ("Segoe UI Variable Display", 10))
         close_btn.place(x = 208, y= 0)
         location = Label(self.frame, bg = '#222222', fg ='white',text = result[0]+', '+result[1], font = ("Segoe UI Variable Display",15))
         #display the time

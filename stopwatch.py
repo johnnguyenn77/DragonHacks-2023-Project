@@ -9,18 +9,18 @@ class Stopwatch:
         self.start_time = None
         self.is_running = False
 
-        self.frame = tk.Frame(self.root, highlightbackground='white', highlightcolor= "white",highlightthickness=1, bg = "#a7bfd5")
+        self.frame = tk.Frame(self.root, highlightbackground='white', highlightcolor= "white",highlightthickness=1, bg = "#222222")
         self.frame.place(x=300, y=20)
         make_draggable(self.frame)
-        title = tk.Label(self.frame, fg = 'white',bg = '#222222', text = 'Stopwatch', font = ("Segoe UI Variable Display",10)).pack(anchor = 'nw', pady = 4)
-        close_btn = tk.Button(self.frame, fg = 'white', bd=0, width = 3, text = 'X', command = self.frame.place_forget, bg = '#222222', font = ("Segoe UI Variable Display", 10))
+        title = tk.Label(self.frame, fg = '#66fbfb',bg = '#222222', text = 'Stopwatch', font = ("Segoe UI Variable Display",10)).pack(anchor = 'nw', pady = 4)
+        close_btn = tk.Button(self.frame, fg = '#66fbfb', bd=0, width = 3, text = 'X', command = self.frame.place_forget, bg = '#222222', font = ("Segoe UI Variable Display", 10))
         close_btn.place(x = 251, y= 0)
         #self.display = tk.Label(self.frame, text='00:00:00.000', font='ariel 15').pack()
-        tk.Label(self.frame, textvariable = self.sv, font=("Arial", 35), bg = '#a7bfd5').pack()
+        tk.Label(self.frame, textvariable = self.sv, font=("Arial", 35), bg = '#222222', fg = 'white').pack()
         #self.display.config(textvariable = self.sv)
 
-        tk.Button(self.frame, text='Start', bg = '#cedfef', command= self.start, font = ("Segoe UI Variable Display", 15)).pack(padx = 10,side=tk.LEFT)
-        tk.Button(self.frame, text='Stop', bg = '#cedfef', command= self.stop, font = ("Segoe UI Variable Display", 15)).pack(padx = 10, side=tk.RIGHT)
+        tk.Button(self.frame, text='Start', fg = 'white', bd = 0, bg = '#222222', command= self.start, font = ("Segoe UI Variable Display", 15)).pack(padx = 10,side=tk.LEFT)
+        tk.Button(self.frame, text='Stop', fg = 'white', bd = 0,bg = '#222222', command= self.stop, font = ("Segoe UI Variable Display", 15)).pack(padx = 10, side=tk.RIGHT)
         #tk.Button(btn_frame, text='Reset').pack(side=tk.RIGHT)
         #self.frame.bind('<Return>', self.startstop)
         #self.root.mainloop()

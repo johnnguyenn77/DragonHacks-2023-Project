@@ -40,23 +40,22 @@ class Timer:
                 # when temp value = 0; then a messagebox pop's up
                 # with a message:"Time's up"
                 if (temp == 0):
-                    messagebox.showinfo("Time Countdown", "Time's up ")
+                    messagebox.showinfo("Timeer", "Time's up ")
          
                 # after every one sec the value of temp will be decremented
                 # by one
                 temp -= 1
  
         # Declaration of variables
-        self.frame = Frame(root, highlightbackground='white', highlightcolor= "white",highlightthickness=1, bg='#a7bfd5')
+        self.frame = Frame(root, highlightbackground='white', highlightcolor= "white",highlightthickness=1, bg='#222222')
         self.frame.place(x=300, y=20)
         make_draggable(self.frame)
         
-        top_frame = Frame(self.frame, bd = 0, bg = '#a7bfd5',width = 300)
+        top_frame = Frame(self.frame, bd = 0, bg = '#222222',width = 300)
         
-        name = Label(self.frame, text = 'Timer', font = ("Segoe UI Variable Display", 10), bg = '#a7bfd5')
+        name = Label(self.frame, text = 'Timer', font = ("Segoe UI Variable Display", 10), fg = '#66fbfb', bg = '#222222')
 
-        
-        close_btn = Button(self.frame, bd = 0, width = 3, text = 'X', command = self.frame.place_forget, bg = '#cedfef', font = ("Segoe UI Variable Display", 12))
+        close_btn = Button(self.frame, bd = 0, fg = '#66fbfb', width = 3, text = 'X', command = self.frame.place_forget, bg = '#222222', font = ("Segoe UI Variable Display", 12))
         name.pack(anchor = 'nw', pady=4)
         
         hour=StringVar()
@@ -67,19 +66,19 @@ class Timer:
         hour.set("00")
         minute.set("00")
         second.set("00")
-        button_frame = Frame(self.frame, bd = 4, bg='#cedfef')
+        button_frame = Frame(self.frame, bd = 4, bg='#222222')
 
         # Use of Entry class to take input from the user
-        hourEntry= Entry(button_frame, width=3, bd = 0, justify='center', font = ("Segoe UI Variable Display", 23), textvariable=hour, bg = '#cedfef').pack(side = LEFT)
+        hourEntry= Entry(button_frame, width=3, fg = 'white', bd = 0, justify='center', font = ("Segoe UI Variable Display", 23), textvariable=hour, bg = '#222222').pack(side = LEFT)
   
-        minuteEntry= Entry(button_frame, width=3, bd = 0, justify='center', font = ("Segoe UI Variable Display", 23),textvariable=minute, bg = '#cedfef').pack(side = LEFT)
+        minuteEntry= Entry(button_frame, width=3, fg = 'white', bd = 0, justify='center', font = ("Segoe UI Variable Display", 23),textvariable=minute, bg = '#222222').pack(side = LEFT)
   
-        secondEntry= Entry(button_frame, width=3, bd = 0, justify= CENTER, font = ("Segoe UI Variable Display", 23), textvariable=second, bg = '#cedfef').pack(side = LEFT)
+        secondEntry= Entry(button_frame, width=3, fg = 'white', bd = 0, justify= CENTER, font = ("Segoe UI Variable Display", 23), textvariable=second, bg = '#222222').pack(side = LEFT)
 
         button_frame.pack()
 
         # button widget
-        btn = Button(self.frame, bd = 0, text='Start', command= submit, font= ("Segoe UI Variable Display", 12), bg = '#cedfef').pack()
+        btn = Button(self.frame, bd = 0, text='Start', command= submit, font= ("Segoe UI Variable Display", 12), bg = '#222222', fg = 'white').pack()
         close_btn.place(x= 133, y = 0)
         # infinite loop which is required to
         # run tkinter program infinitely

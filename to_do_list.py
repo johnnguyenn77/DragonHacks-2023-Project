@@ -5,35 +5,35 @@ from make_draggable import make_draggable
 class To_Do_List:
 
     def __init__(self,root):
-        self.frame = tkinter.Frame(root, highlightbackground='white', highlightcolor= "white",highlightthickness=1, bg ='#a7bfd5')
+        self.frame = tkinter.Frame(root, highlightbackground='white', highlightcolor= "white",highlightthickness=1, bg ='#222222')
         make_draggable(self.frame)
         
         #Where GUI starts
-        name = tkinter.Label(self.frame, text = 'To-do List', font = ("Segoe UI Variable Display", 10), bg = '#a7bfd5')
-        close_btn = tkinter.Button(self.frame, bd = 0, width = 3, text = 'X', command = self.frame.place_forget, bg = '#cedfef', font = ("Segoe UI Variable Display", 12))
+        name = tkinter.Label(self.frame, text = 'To-do List', fg = '#66fbfb', font = ("Segoe UI Variable Display", 12), bg = '#222222')
+        close_btn = tkinter.Button(self.frame, fg = '#66fbfb', bd = 0, width = 3, text = 'X', command = self.frame.place_forget, bg = '#222222', font = ("Segoe UI Variable Display", 12))
         name.pack(anchor = 'nw', pady=4)
-        close_btn.place(x= 290, y = 0)
-        frame_tasks = tkinter.Frame(self.frame)
+        close_btn.place(x= 325, y = 0)
+        frame_tasks = tkinter.Frame(self.frame, bg = '#222222')
 
         frame_tasks.pack()
 
-        self.listbox_tasks = tkinter.Listbox(frame_tasks,height=10,width=50, bg = '#cedfef', bd = 0)
-        self.listbox_tasks.pack(side=tkinter.LEFT)
+        self.listbox_tasks = tkinter.Listbox(frame_tasks,height=10,width=47, bg = '#222222', bd = 0, fg = 'white', font = ("Segoe UI Variable Display", 10))
+        self.listbox_tasks.pack(side=tkinter.LEFT, padx = 5)
 
 
-        scrollbar_tasks = tkinter.Scrollbar(frame_tasks, bg = '#cedfef', bd = 0)
+        scrollbar_tasks = tkinter.Scrollbar(frame_tasks, bg = '#222222', bd = 0)
         scrollbar_tasks.pack(side = tkinter.RIGHT, fill = tkinter.Y)
 
         self.listbox_tasks.config(yscrollcommand=scrollbar_tasks.set)
         scrollbar_tasks.config(command=self.listbox_tasks.yview)
 
-        self.entry_task = tkinter.Entry(self.frame, width=53, bg = '#cedfef')
-        self.entry_task.pack()
+        self.entry_task = tkinter.Entry(self.frame, width=55, bg = '#222222', fg = 'white',highlightbackground='white', highlightcolor= "white",highlightthickness=1, bd = 0, insertbackground='white')
+        self.entry_task.pack(pady = 3)
 
-        button_add_task = tkinter.Button(self.frame,bd = 0,text="Add task", width=10, command=self.add_task, bg = '#cedfef')
+        button_add_task = tkinter.Button(self.frame,fg = 'white',bd = 0, text="Add task", width=10, command=self.add_task, bg = '#222222', font = ("Segoe UI Variable Display", 10))
         button_add_task.pack(side = tkinter.LEFT)
 
-        button_delete_task = tkinter.Button(self.frame, bd = 0,text="Delete task", width=10, command=self.delete_task, bg = '#cedfef')
+        button_delete_task = tkinter.Button(self.frame, fg = 'white', bd = 0,text="Delete task", width=10, command=self.delete_task, bg = '#222222', font = ("Segoe UI Variable Display", 10))
         button_delete_task.pack(side = tkinter.RIGHT)
         
         self.load_tasks()
